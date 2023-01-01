@@ -7,12 +7,12 @@ using Doublsb.Dialog;
 public class StoryManager : MonoBehaviour
 {
     public DialogManager dialogManager;
-    private const string filename = "Assets/story.txt";
+    //private const string filename = "WhatDoesTheCatSay_Data/story.txt";
     private List<DialogData> dialogTexts;
 
     private void LoadText()
     {
-        StreamReader stm = new StreamReader(filename);
+        StreamReader stm = new StreamReader(Application.dataPath+"/story.txt");
 
         while(!stm.EndOfStream)
         {
